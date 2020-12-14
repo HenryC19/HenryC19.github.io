@@ -23543,8 +23543,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We are going to create a logistic regression, and plot showing the impact that the amount of mention of an artist has on the chances on them winning. 
-<del>for henry: code block below creates logisic regression and corresponding plot to to show the impact that mentions have on the chances of winning</del></p>
+<p>We are going to create a logistic regression, and plot showing the impact that the amount of mention of an artist has on the chances on them winning.</p>
 
 </div>
 </div>
@@ -23645,8 +23644,6 @@ mentions       0.0005      0.000      1.310      0.190      -0.000       0.001
 <p>From the graph, we can see that while having a ton of mentions makes it substantially more likely that the artist would win a category at the show, there are still a ton of artists who only had a fraction of the mentions of many of the more popular artists who also won a category at the show.</p>
 <p>From the logical regression, the data shows a positive correlation between the number of mentions, and the likelihood of winning a nomination at the show. But, it is not by much, and it is not a strong correlation based off the p-value. As a result, we would need to reject the hypothesis that was mentioned quite a bit ago about how the artist's popularity would basically guarantee a winning spot at the 2018 AMAs.</p>
 <p>This is due to the amount of winners who had far less mentions, and popularity compared to their peers, and yet still won a nomination. Usually with awards shows, they are not always popularity contests in that getting the winners for each category have other factors other than say how many mentions or interactions they get on Twitter. Categories are also pre-determinded from the start. This includes genres such as country, electronic dance music (EDM) and alternative rock who had nomiations who basically had very small sections to no section on the trending graph whatsoever.</p>
-<p>(
-<del>Interpretation summary for henry: this shows a positive correlation between number of mentions and the likelihood of winning, but not by much and not a very strong correlation based on the p value. This would mean that we would have to reject the null (that there is any relationship between mentions and chances of winning). This makes sense because award shows are not necessarily popularity contests.</del></p>
 <p>*note for henry: if you want, you could add interpretation of r-squared, standard error, etc, in order to add context, It also might help to discuss why we are able to use this model, based on assumptions: (TBD)</p>
 <p>binary logistic regression requires the dependent variable to be binary 
 logistic regression requires the observations to be independent of each other. 
@@ -23911,8 +23908,8 @@ Trend?         1.7918      1.080      1.659      0.097      -0.325       3.909
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>much lower p value, but still too high to reject null positive correlation between trending and likelihood of winning relationship can also be seen in bar plot helpful insight: Twitter's algorithm determines what is trending by favoring sharp spikes rather than gradual sustained growth, data scientist Gilad Lotan has explained. Trends are determined by a combination of volume and how much time it takes to create volume. could also interpret confidence iintervals
-<a href="https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time">https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time</a>.</p>
+<p>This regression shows a much lower p value, but still too high to reject the null hypothesis. A positive correlation between trending and likelihood of winning relationship can also be seen in bar plot. What seperates trending and mentions, as explained by data scientist Gilad Lotan, is that "Twitter's algorithm determines what is trending by favoring sharp spikes rather than gradual sustained growth."  This means that Trends are determined by a combination of volume and how much time it takes to create volume, so this helps explain the stronger correlation in trends vs wins, as compared to mentions vs wins. Trends are more focused on volume of tweets, which means they are more likely to correlate with AMA winners is the winner trended arount the time of the AMAs.
+Source: <a href="https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time">https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time</a>.</p>
 
 </div>
 </div>
