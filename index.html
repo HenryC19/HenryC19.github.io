@@ -13459,7 +13459,7 @@ This analysis will hopefully provide some insight into the role of viewer input 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Tidying">Data Tidying<a class="anchor-link" href="#Data-Tidying">&#182;</a></h2><p>The data table contains many unneeded columns and take alot of space in the dataframe. We need to drop most of these columns to keep the dataframe clean and simple.</p>
+<h2 id="Data-Tidying">Data Tidying<a class="anchor-link" href="#Data-Tidying">&#182;</a></h2><p>The data table contains many unneeded columns and take alot of space in the dataframe. We need to drop most of the columns to keep the dataframe clean and simple. As a result, we only kept the full text of the tweet, the tweet's id, the user description, and the amount of retweets the tweet got.</p>
 
 </div>
 </div>
@@ -13568,15 +13568,7 @@ This analysis will hopefully provide some insight into the role of viewer input 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><del>As we see here, most of the columns are droped and the needed columns are intact.</del> As a result, we only kept the full text of the tweet, the tweet's id, the user description, and the amount of retweets the tweet got. The rest are dropped from the table.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We want to classify each tweet of a nominee of the Music Awards. To do this, we make a regular expression for each nominee then apply a classifier function to each tweet_full_text in the dataframe. We then have a new column with classifier.</p>
+<p>We want to classify each tweet of a nominee of the Music Awards. To do this, we make a regular expression (regex) for each nominee then apply a classifier function to each tweet_full_text in the dataframe. We then have a new column with classifier.</p>
 
 </div>
 </div>
@@ -13640,7 +13632,7 @@ This analysis will hopefully provide some insight into the role of viewer input 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can start using the regex (regular expression) variables above to make a classifier function to separate the tweets based on the artists that were mentioned in the tweets.</p>
+<p>We can start using the regex variables above to make a classifier function to separate the tweets based on the artists that were mentioned in the tweets.</p>
 
 </div>
 </div>
@@ -16904,7 +16896,7 @@ cracked above four digit mentions.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-trending-data">Preparing the trending data<a class="anchor-link" href="#Preparing-the-trending-data">&#182;</a></h2><p>Now, we will analyze the trends on twitter</p>
+<h2 id="Preparing-the-trending-data">Preparing the trending data<a class="anchor-link" href="#Preparing-the-trending-data">&#182;</a></h2><p>Now, we will analyze the trending topics on Twitter as of October 9th, 2018.</p>
 
 </div>
 </div>
@@ -17076,7 +17068,7 @@ cracked above four digit mentions.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Some of the columns are not needed. The important ones are the name of the trend, volume, and location.</p>
+<p>Some of the columns are not needed such as the query, url, woeid, and time. The important ones kept in the table are the name of the trend, volume, and location.</p>
 
 </div>
 </div>
@@ -17207,7 +17199,7 @@ cracked above four digit mentions.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Next, some of the trending tags are unrelated to the AMAs, so we need to filter them out</p>
+<p>Though, as you can see, the some of the trending topics on Twitter are not at all related to the American Music Awards. As a result, we need to filter them out.</p>
 
 </div>
 </div>
@@ -18701,7 +18693,7 @@ a few exceptions. Some artists such as Camila Cabello, Taylor Swift,and Cardi B 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graphing-the-tweet-volume-per-location">Graphing the tweet volume per location<a class="anchor-link" href="#Graphing-the-tweet-volume-per-location">&#182;</a></h2><p>Next, we will take a look at the locations of the trends.</p>
+<h2 id="Graphing-the-tweet-volume-per-location">Graphing the tweet volume per location<a class="anchor-link" href="#Graphing-the-tweet-volume-per-location">&#182;</a></h2><p>Next, we will take a look at the locations of the trends. this will be first visualized as a table.</p>
 
 </div>
 </div>
@@ -22037,7 +22029,8 @@ L 1234.490469 23.220937
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the graph, we can see that Portland, Phoenix, Long Beach, and Chicago are the top cities with the highest tweet volume. We can also see that the majority of the cities have very similar tweet volumes.</p>
+<p>From the graph, we can see that Portland, Phoenix, Long Beach, and Chicago are the top cities with the highest tweet volume talking about the AMAs. Though, Portland leads with over 2.8 million tweets or so with Phoenix is not far behind with around 2.6 million tweets with Long Beach, and Chicago having over 2 million tweets about the AMAs.</p>
+<p>We can also see that the majority of the major metropolitan cities have very similar tweet volumes of around 1.25 million tweets.</p>
 
 </div>
 </div>
@@ -22045,7 +22038,8 @@ L 1234.490469 23.220937
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graphing-the-Top-City">Graphing the Top City<a class="anchor-link" href="#Graphing-the-Top-City">&#182;</a></h2><p>We will graph the tweet volume that are only in Portland for analysis, because it is the top city in tweet volume.</p>
+<h2 id="Graphing-the-Top-City">Graphing the Top City<a class="anchor-link" href="#Graphing-the-Top-City">&#182;</a></h2><p>In this section, we will graph the tweet volume that are only in Portland for analysis, because it is the top city in tweet volume at around 2.8 million tweets. This analysis is to find how influential certain nominees are in certain cities, and a way to measure this is the tweet volume below.</p>
+<p>We will first be measuring the tweet volume of artists in Portland in a table first, and then converting it to a bar graph later on.</p>
 
 </div>
 </div>
@@ -23258,7 +23252,8 @@ L 1164.793437 23.220937
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This graph follows the same trend as the overall tweet volume for the nominees. Camila still dominates as the #1 trend in Portland, and Taylor Swift as #2.</p>
+<p>This bar graph follows the same trend as the overall tweet volume for the nominees. As seen on the graph, Camila dominates as the #1 trend in Portland with Taylor Swift still getting a noticably smaller, but still sizeable portion of the tweet volume in Portland at #2. This part of the graph is still rather similar to the tweet volume nationwide, but there are notable differences later on.</p>
+<p>One part that is rather striking is the tweet volume of Cardi B, and Drake are absent on the graph as they do not appear whatsoever on the graph for Portland, but appear on the nationwide tweet volume graph. Instead, Shawn Mendes, Khalid, and Post Malone take the rest of the visible tweet volume graph for Portland which does fall in line with much of the rest of the country.</p>
 
 </div>
 </div>
@@ -23274,6 +23269,14 @@ L 1164.793437 23.220937
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Chances of Winning vs. Mentions</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this upcoming section, we are taking a look at the winners of each category in the 2018 AMAs, and comparing it to the sheer amount of mentions that an artist had. We are first detailing the winners of each category in a table below.</p>
 
 </div>
 </div>
@@ -23391,7 +23394,7 @@ L 1164.793437 23.220937
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This cell appends a column to the nom_df table determining if the nominee won or not</p>
+<p>This cell appends a column to the nom_df table determining if the nominee won or not in the 2018 AMAs. The representation of whether or not the artist won a nomination has a 1 marked under their row, and those who did not win have a 0 marked instead.</p>
 
 </div>
 </div>
@@ -23540,7 +23543,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>for henry: code block below creates logisic regression and corresponding plot to to show the impact that mentions have on the chances of winning</p>
+<p>We are going to create a logistic regression, and plot showing the impact that the amount of mention of an artist has on the chances on them winning. 
+<del>for henry: code block below creates logisic regression and corresponding plot to to show the impact that mentions have on the chances of winning</del></p>
 
 </div>
 </div>
@@ -23638,15 +23642,19 @@ mentions       0.0005      0.000      1.310      0.190      -0.000       0.001
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Interpretation summary for henry: this shows a positive correlation between number of mentions and the likelihood of winning, but not by much and not a very strong correlation based on the p value. This would mean that we would have to reject the null (that there is any relationship between mentions and chances of winning). This makes sense because award shows are not necessarily popularity contests.
-*note for henry: if you want, you could add interpretation of r-squared, standard error, etc, in order to add context, It also might help to discuss why we are able to use this model, based on assumptions:</p>
+<p>From the graph, we can see that while having a ton of mentions makes it substantially more likely that the artist would win a category at the show, there are still a ton of artists who only had a fraction of the mentions of many of the more popular artists who also won a category at the show.</p>
+<p>From the logical regression, the data shows a positive correlation between the number of mentions, and the likelihood of winning a nomination at the show. But, it is not by much, and it is not a strong correlation based off the p-value. As a result, we would need to reject the hypothesis that was mentioned quite a bit ago about how the artist's popularity would basically guarantee a winning spot at the 2018 AMAs.</p>
+<p>This is due to the amount of winners who had far less mentions, and popularity compared to their peers, and yet still won a nomination. Usually with awards shows, they are not always popularity contests in that getting the winners for each category have other factors other than say how many mentions or interactions they get on Twitter. Categories are also pre-determinded from the start. This includes genres such as country, electronic dance music (EDM) and alternative rock who had nomiations who basically had very small sections to no section on the trending graph whatsoever.</p>
+<p>(
+<del>Interpretation summary for henry: this shows a positive correlation between number of mentions and the likelihood of winning, but not by much and not a very strong correlation based on the p value. This would mean that we would have to reject the null (that there is any relationship between mentions and chances of winning). This makes sense because award shows are not necessarily popularity contests.</del></p>
+<p>*note for henry: if you want, you could add interpretation of r-squared, standard error, etc, in order to add context, It also might help to discuss why we are able to use this model, based on assumptions: (TBD)</p>
 <p>binary logistic regression requires the dependent variable to be binary 
 logistic regression requires the observations to be independent of each other. 
 logistic regression requires there to be little or no multicollinearity among the independent variables.
 logistic regression assumes linearity of independent variables and log odds.
 logistic regression typically requires a large sample size.  A general guideline is that you need at minimum of 10 cases with the least frequent outcome for each independent variable in your model.</p>
 <p>here is a helpful link for interpreting those if you choose to:
-<a href="https://www.statisticssolutions.com/assumptions-of-logistic-regression/">https://www.statisticssolutions.com/assumptions-of-logistic-regression/</a></p>
+<a href="https://www.statisticssolutions.com/assumptions-of-logistic-regression/">https://www.statisticssolutions.com/assumptions-of-logistic-regression/</a> ) (Still potentially working on this)</p>
 
 </div>
 </div>
@@ -23903,11 +23911,7 @@ Trend?         1.7918      1.080      1.659      0.097      -0.325       3.909
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>much lower p value, but still too high to reject null
-positive correlation between trending and likelihood of winning
-relationship can also be seen in bar plot
-helpful insight: Twitter's algorithm determines what is trending by favoring sharp spikes rather than gradual sustained growth, data scientist Gilad Lotan has explained. Trends are determined by a combination of volume and how much time it takes to create volume.
-could also interpret confidence iintervals
+<p>much lower p value, but still too high to reject null positive correlation between trending and likelihood of winning relationship can also be seen in bar plot helpful insight: Twitter's algorithm determines what is trending by favoring sharp spikes rather than gradual sustained growth, data scientist Gilad Lotan has explained. Trends are determined by a combination of volume and how much time it takes to create volume. could also interpret confidence iintervals
 <a href="https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time">https://rethinkmedia.org/blog/how-does-twitter-decide-what-trending#:~:text=Twitter&#39;s%20algorithm%20determines%20what%20is,it%20takes%20to%20create%20volume.&amp;text=Rather%2C%20the%20Twitter%20conversation%20simply%20built%20over%20time</a>.</p>
 
 </div>
@@ -24194,7 +24198,8 @@ quasi-separation. In this case some parameters will not be identified.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Summarize interpretations - Henry</p>
+<p><strong>Wrapping Up</strong>
+When analyzing the data that we have collected, we can infer that the number of tweets an artists gets relating to the AMAs is not an ideal way of predicting the winners of the AMAs in that usually with award shows, it is more than a pure popularity contest. This is espeically apparent when there are several artists/groups that won an award that did not really trend, and have notable tweet volumes. In fact, there were notably quite a few more artists who won that did not trend compared to those that did trend, and won. Many of these categories are already pre-determined from the start which led to some artists that trended far below most others such as Marshmello, and Kane Brown to win categories such as favorite EDM artist, and favorite Country artist despite not much traction with tweets, and not trending.</p>
 <p><strong>Sources of error and Missing data</strong><br>
 From the visualization of tweet volumes and tweets, there were some errors and missing data that needs to be addressed. One error is with the dataset itself, specifically amas_combined.csv. This dataset contains tweets with #AMA but does not categorize the nominee associated with the tweet. Due to this, we had to categorize each tweet with regular expression which is not perfect. This method does not represent the dataset on a true scale, and an improvement can be made with more accurate categories. Next, the missing data with tweet volumes. As mentioned earlier, many of the nominees did not trend at all. According to Elias Dabbas, the author of the dataset on kaggle, many of the trending topics trended too late or did not have enough tweets to generate a trend. Due to the missing data, the nominees that are less popular are not represent well in the tutorial.</p>
 <p><strong>Future ideas</strong><br>
